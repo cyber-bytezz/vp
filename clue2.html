@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Question Form</title>
+    <style>
+        /* Set the background image */
+        body {
+            background-image: url('./assets/images/clue1.jpg');
+            background-size: cover;
+            background-position: center;
+            font-family: Arial, sans-serif;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 0;
+        }
+
+        /* Animated text styling */
+.animated-text2 {
+    position: absolute;
+    top: 50px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-family: 'Sankofa Display';
+    font-size: 80px;
+    font-weight: bold;
+    color: #fff;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+   
+}
+
+        .sankofa-display-regular {
+            font-family: "Sankofa Display", sans-serif;
+            font-weight: 400;
+            font-style: normal;
+          }
+
+        /* Form container styling */
+        .form-container {
+            background-color: rgba(255, 255, 255, 0.8); /* Slightly transparent white background */
+            padding: 100px;
+            border-radius: 10px;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        input[type="text"] {
+            padding: 10px;
+            font-size: 20px;
+            width: 300px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            transition: border-color 0.3s ease;
+            margin: 10px auto; /* Centers the input */
+            display: block; /* Makes the input block-level */
+        }
+
+        input[type="text"]:focus {
+            border-color: #007bff; /* Changes border color on focus */
+        }
+
+        button {
+            padding: 10px;
+            font-size: 16px;
+            margin: 10px auto; /* Centers the button */
+            display: block; /* Makes the button block-level */
+            border: none;
+            background-color: #007bff;
+            color: white;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        button:hover {
+            background-color: #0056b3; /* Changes background color on hover */
+        }
+
+        /* Hidden message styling */
+        #hidden-message {
+            display: none;
+            margin-top: 20px;
+            font-size: 18px;
+            color:green;
+            animation: reveal 1s forwards;
+        }
+
+        @keyframes reveal {
+            from {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    </style>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Sankofa+Display&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <div class="animated-text2">Hash Enigma</div> <!-- Added animated text -->
+    <div class="form-container">
+        <h2>DECRYPT THE MESSAGE:</h2>
+        <h3>Decrypt the numbers in to alphabetic values <br> [clue:The words in jumbled form ]<br>[clue: all the letters in capital letters] </h3>
+        <h1>1 5 3 15 21 8 14 9 1 9 14 20 20 20</h1>
+        <input type="text" id="user-answer" placeholder="" />
+        <button onclick="checkAnswer()">Submit</button>
+        <div id="hidden-message">Volunteer has a green card</div>
+    </div>
+
+    <script>
+        function checkAnswer() {
+            const correctAnswer = "AUTHENTICATION"; // Replace with the correct answer
+            const userAnswer = document.getElementById('user-answer').value;
+            if (userAnswer === correctAnswer) {
+                document.getElementById('hidden-message').style.display = 'block';
+            } else {
+                alert('Incorrect answer, try again!');
+            }
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style3.css" />
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Sankofa+Display&display=swap" rel="stylesheet">
+</head>
+<body  oncontextmenu="return false">
+    <div class="login">
+        <video id="video1" autoplay loop muted >
+            <source src="./assets/video/fire.mp4" type="video/mp4" />
+        </video>
+        <form action="fourth.html" class="form" onsubmit="return validateForm()">
+            <h1 class="head">Crimson Abyss</h1>
+            <div class="content">
+                <div class="box">
+                    <i class="ri-user-3-line login__icon"></i>
+                    <div class="box-input">
+                        <input type="text" required class="input" id="login-username" placeholder=" "/>
+                        <label for="login-username" class="login__label"></label>
+                    </div>
+                </div>
+            </div>
+            <button type="submit" class="button">Decrypting access</button>
+            <h2>[Clue: Use Ceaser Cipher FunWheel]</h2>
+        </form>
+
+        <!-- Icon containers for top-right and left corners -->
+        <div class="icon-container top-right">
+            <img src="./assets/images/luffy.jpg" class="question-icon" onclick="toggleQuestionBox('question-box1')" />
+            <img src="./assets/images/lightyagami.jpg" class="question-icon" onclick="toggleQuestionBox('question-box2')" />
+            <img src="./assets/images/naruto.jpg" class="question-icon" onclick="toggleQuestionBox('question-box3')" />
+        </div>
+
+        <div class="icon-container top-left">
+            <img src="./assets/images/gojo1.jpg" class="question-icon" onclick="toggleQuestionBox('question-box4')" />
+            <img src="./assets/images/mikey.jpg" class="question-icon" onclick="toggleQuestionBox('question-box5')" />
+            <img src="./assets/images/uchigo.jpg" class="question-icon" onclick="toggleQuestionBox('question-box6')" />
+        </div>
+
+        <!-- Hidden question boxes -->
+        <div id="question-box1" class="question-box hidden">
+            <p>Answer this question to reveal the clue:</p>
+            <h3>1.I am a word that represents the boundary between two systems, allowing them to communicate with each other. I am often found between software components, ensuring that data flows smoothly between them. What word am I?</h3>
+            <input type="text" id="answer1" placeholder="Enter your answer" />
+            <button onclick="checkAnswer('answer1', 'hidden-message1')">Submit</button>
+            <h1 id="hidden-message1" class="hidden-message hidden">FU</h1>
+        </div>
+
+        <div id="question-box2" class="question-box hidden">
+            <P>Answer this question to reveal the clue:</P>
+            <h3>2.I am a word that describes a security mechanism designed to control who or what can access certain resources. I can be as simple as a lock or as complex as a set of rules, but my purpose is always to protect. What word am I?</h3>
+            <input type="text" id="answer2" placeholder="Enter your answer" />
+            <button onclick="checkAnswer('answer2', 'hidden-message2')">Submit</button>
+            <h1 id="hidden-message2" class="hidden-message hidden">BS</h1>
+        </div>
+
+        <div id="question-box3" class="question-box hidden">
+            <p>Answer this question to reveal the clue</p>
+            <h3>3.I am something that protects your online accounts. I am usually made up of letters, numbers, and symbols, and the stronger I am, the harder it is for someone to break into your accounts. What am I?</h3>
+            <input type="text" id="answer3" placeholder="Enter your answer" />
+            <button onclick="checkAnswer('answer3', 'hidden-message3')">Submit</button>
+            <h1 id="hidden-message3" class="hidden-message hidden">WD</h1>
+        </div>
+
+        <div id="question-box4" class="question-box hidden">
+            <p>Answer this question to reveal the clue:</p>
+            <h3>4.I am a type of software that sneaks into your computer without you knowing. I can cause harm, steal information, or even take control of your system. I often come attached to something you download. What am I?</h3>
+            <input type="text" id="answer4" placeholder="Enter your answer" />
+            <button onclick="checkAnswer('answer4', 'hidden-message4')">Submit</button>
+            <h1 id="hidden-message4" class="hidden-message hidden">QD</h1>
+        </div>
+
+        <div id="question-box5" class="question-box hidden">
+            <p>Answer this question to reveal the clue:</p>
+            <h3>5.I am a small file that websites place on your computer to track your activities and remember your preferences. While I can be helpful, I can also be used to spy on you. What am I?</h3>
+            <input type="text" id="answer5" placeholder="Enter your answer" />
+            <button onclick="checkAnswer('answer5', 'hidden-message5')">Submit</button>
+            <h1 id="hidden-message5" class="hidden-message hidden">OB</h1>
+        </div>
+
+        <div id="question-box6" class="question-box hidden">
+            <p>Answer this question to reveal the clue:</p>
+            <h3>6.I am a process that transforms your data into a secret code, making it unreadable to anyone who doesn’t have the right key. This keeps your information safe from prying eyes. What am I?</h3>
+            <input type="text" id="answer6" placeholder="Enter your answer" />
+            <button onclick="checkAnswer('answer6', 'hidden-message6')">Submit</button>
+            <h1 id="hidden-message6" class="hidden-message hidden">VLV</h1>
+        </div>
+       
+    </div>
+
+    <script src="script3.js"></script>
+</body>
+</html>
